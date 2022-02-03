@@ -49,26 +49,33 @@ void setup() {
 
 
     for(uint8_t i = 0; i < 255; ++i) {
-        //motor_1.setSpeed(i);
-        motor_2.setSpeed(i);
-        //motor_3.setSpeed(i);
-        motor_4.setSpeed(i);
+        //motor_1.setPWM(i);
+        motor_2.setPWM(i);
+        //motor_3.setPWM(i);
+        motor_4.setPWM(i);
         delay(10);
+
+        Serial.print("2:"); Serial.print(motor_2.getSpeed_Hz());
+        Serial.print("4:"); Serial.print(motor_4.getSpeed_Hz());
+
     }
     delay(2000);
 
     for(uint8_t i = 255; i > 1; --i) {
-        //motor_1.setSpeed(i);
-        motor_2.setSpeed(i);
-        //motor_3.setSpeed(i);
-        motor_4.setSpeed(i);
+        //motor_1.setPWM(i);
+        motor_2.setPWM(i);
+        //motor_3.setPWM(i);
+        motor_4.setPWM(i);
         delay(10);
+        
+        Serial.print("2:"); Serial.print(motor_2.getSpeed_Hz());
+        Serial.print("4:"); Serial.print(motor_4.getSpeed_Hz());
     }
 
-    motor_1.setSpeed(0);
-    motor_2.setSpeed(0);
-    motor_3.setSpeed(0);
-    motor_4.setSpeed(0);
+    motor_1.setPWM(0);
+    motor_2.setPWM(0);
+    motor_3.setPWM(0);
+    motor_4.setPWM(0);
 
 
 }
