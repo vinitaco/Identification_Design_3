@@ -17,7 +17,7 @@ void MotorDriver::initialize(void) {
     pinMode(this->_pwm_pin, OUTPUT);
     pinMode(this->_encoder_pin, INPUT);
 
-    analogWriteFrequency(this->_pwm_pin, 488);
+    analogWriteFrequency(this->_pwm_pin, 60);
 }
 
 void MotorDriver::setPWM(uint8_t pwm_input) {
