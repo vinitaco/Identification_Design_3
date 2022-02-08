@@ -29,6 +29,9 @@ float MotorDriver::getSpeed_Hz(void) {
     uint32_t time_delta = time - this->_previous_time;
     uint32_t count_delta = this->_encoder_counter - this->_previous_encoder_counter;
 
+    this->_previous_time = time;
+    this->_previous_encoder_counter = this->_encoder_counter;
+
     return ((float)(1e6 * count_delta)) / ((float)time_delta) / 6533.0f;
 }
 
