@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <Stepper.h>
 
 const uint8_t STEPPER_PIN_1 = 22;
