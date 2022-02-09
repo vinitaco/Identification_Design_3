@@ -23,6 +23,7 @@ void setup() {
 
     motor_1.setDirection(true);
 
+    Serial.begin(9600);
 
     for(uint8_t i = 0; i < 255; ++i) {
         motor_1.setPWM(i);
